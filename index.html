@@ -1,66 +1,87 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="小菜菜的个人自我介绍网站">
-  <title>小菜菜 | 个人介绍</title>
-  <link rel="stylesheet" href="style/style.css">
-</head>
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#" aria-label="返回首页">小菜菜</a>
-      <button id="themeToggle" class="theme-toggle" type="button" aria-label="切换亮暗主题" aria-pressed="false">
-        <span class="toggle-track">
-          <span class="toggle-thumb"></span>
-        </span>
-        <span class="toggle-label">浅色</span>
-      </button>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="avatar-wrap" aria-label="头像">
-          <div class="avatar">小</div>
-        </div>
-        <div class="hero-content">
-          <p class="hero-kicker">Hello, I am</p>
-          <h1>小菜菜</h1>
-          <p class="hero-text">
-            一名前端开发者，专注于构建简洁、流畅、可靠的 Web 体验。
-            热爱将设计美感与工程思维结合，持续打磨每一个细节。
-          </p>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="小菜菜的个人自我介绍网站" />
+    <title>小菜菜 | 个人介绍</title>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#" aria-label="返回首页">小菜菜</a>
+        <button
+          id="themeToggle"
+          class="theme-toggle"
+          type="button"
+          aria-label="切换亮暗主题"
+          aria-pressed="false"
+        >
+          <span class="toggle-track">
+            <span class="toggle-thumb"></span>
+          </span>
+          <span class="toggle-label">浅色</span>
+        </button>
       </div>
-    </section>
+    </header>
 
-    <section class="about">
-      <div class="container">
-        <h2>Skills / About</h2>
-        <p class="about-desc">
-          具备扎实的前端基础与良好的协作能力，擅长从需求理解、页面实现到交互优化的全流程开发。
-        </p>
-        <div class="skills-grid">
-          <article class="skill-card">
-            <h3>HTML5 &amp; CSS3</h3>
-            <p>语义化结构、响应式布局、现代 CSS 动效与组件化样式组织。</p>
-          </article>
-          <article class="skill-card">
-            <h3>JavaScript (ES6+)</h3>
-            <p>熟悉原生 JS 开发，能够实现高质量交互与可维护的前端逻辑。</p>
-          </article>
-          <article class="skill-card">
-            <h3>体验与性能</h3>
-            <p>关注可访问性、页面性能与细节体验，打造专业稳定的用户界面。</p>
-          </article>
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="avatar-wrap" aria-label="头像">
+            <div class="avatar">小</div>
+          </div>
+          <div class="hero-content">
+            <p class="hero-kicker">Hello, I am</p>
+            <h1>小菜菜</h1>
+            <p class="hero-text">
+              一名前端开发者，专注于构建简洁、流畅、可靠的 Web 体验。
+              热爱将设计美感与工程思维结合，持续打磨每一个细节。
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
 
-  <script src="js/main.js"></script>
-</body>
+      <section class="inspiration">
+        <div class="container">
+          <h2>Inspiration / 触发灵感</h2>
+          <button class="btn-primary" onclick="changeQuote()">触发灵感</button>
+          <div id="quote-box" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="hitokoto-section">
+        <div class="container hitokoto-inner">
+          <div class="hitokoto-label">
+            每日一言
+            <button
+              id="refresh-hitokoto"
+              class="refresh-btn"
+              aria-label="刷新一言"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M21 2v6h-6m-9 10H0v6m3-12A9 9 0 0118 4.5L21 8M3 16l3 3.5A9 9 0 0021 12"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div class="hitokoto-content">
+            <span id="hitokoto-text">正在加载灵感...</span>
+            <span id="hitokoto-author"></span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/main.js"></script>
+  </body>
 </html>
